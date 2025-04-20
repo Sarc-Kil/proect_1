@@ -17,6 +17,7 @@
    ![](https://github.com/Sarc-Kil/proect_1/blob/master/screnchot/Снимок1.PNG)
 
 2.Окно входа (Ошибка ввода данных)
+
   ![](https://github.com/Sarc-Kil/proect_1/blob/master/screnchot/Снимок.PNG)
 ## Установка
 
