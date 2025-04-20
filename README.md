@@ -12,7 +12,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/reretel/Proect_2_gif.git
+   git clone https://
     ```
    2. Откройте проект в Visual Studio:
    - Запустите Visual Studio.
