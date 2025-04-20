@@ -1,0 +1,198 @@
+﻿<Window x:Class="proect_1.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proect_1.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Height="400" 
+        Width="800"
+        FontFamily="Consolas">
+    <Grid Background="Purple">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="10 0 0 0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0">
+            <TextBlock Text="Правктическая работа №2 - Разработка окна Авторизации с использованием EY и SQL Server и Хорнет"
+                       FontSize="20"
+                       Width="600"
+                       Foreground="#CEA2FD"
+                       TextWrapping="Wrap"/>
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0 0 10 0"
+                    Grid.Column="1"
+                    Grid.Row="0">
+            <Button Content="{materialDesign:PackIcon Kind=Close}"
+                    Foreground="#CEA2FD"
+                    x:Name="BtnClose"
+                    Click="BtnClose_Click"
+                    Style="{StaticResource MaterialDesignIconButton}"/>
+        </StackPanel>
+        <StackPanel Background="#0d0d0f"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+        <Image Source="/Images/хорнет.jpg"
+               Grid.Column="1"
+               Stretch="Fill" Grid.Row="1"/>
+
+        <StackPanel Background="#0d0d0f"
+                    Grid.Column="0"
+                    Grid.Row="1"/>
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="0 0 0 70"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+            <TextBlock Text ="Войти в систему"
+                       TextAlignment="Center"
+                       FontSize="20"
+                       Foreground="{Binding ElementName=TbLogin, Path=Foreground}"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0 10 0 0">
+                <materialDesign:PackIcon Kind="Person"
+                                         Margin="0 3 0 0"
+                                         Width="20"
+                                         Height="20"
+                                         Foreground="{Binding ElementName=TbLogin, Path=Foreground}"/>
+                <TextBox
+                    Width="140"
+                    FontSize="15"
+                    x:Name="TbLogin"
+                    Foreground="Purple"
+                    materialDesign:TextFieldAssist.UnderlineBrush="#B941ff"
+                    materialDesign:HintAssist.Hint="Введите логин"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    materialDesign:HintAssist.HelperText="Не менее 8 символ"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+            Margin="0 30 0 0">
+                <materialDesign:PackIcon Kind="Settings"
+                             Margin="0 3 0 0"
+                             Width="20"
+                             Height="20"
+                             Foreground="{Binding ElementName=TbLogin, Path=Foreground}"/>
+                <PasswordBox
+                    Width="140"
+                    FontSize="15"
+                    x:Name="PbPassword"
+                    Foreground="Purple"
+                    materialDesign:TextFieldAssist.UnderlineBrush="#B941ff"
+                    materialDesign:HintAssist.Hint="Введите пароль"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    materialDesign:HintAssist.HelperText="Не менее 8 символ"/>
+            </StackPanel>
+
+            <StackPanel Margin="0 30 0 0">
+                <Button Background="#CEA2FD"
+                        x:Name="BtnLogin"
+                        Click="BtnLogin_Click"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ButtonProgressAssist.IndicatorForeground="#B941ff"
+                        materialDesign:ButtonProgressAssist.Value="-1"
+                        materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                        materialDesign:ButtonProgressAssist.IsIndeterminate="True">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Check"
+                                                 Margin="0 0 3 0"
+                                                 Foreground="Purple"/>
+                        <TextBlock Text="Войти"
+                                   Foreground="Purple"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="0 0 0 90"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal">
+                <Separator Background="Purple"
+                           Height="5"
+                           Width="70"/>
+                <TextBlock Text="Или войти через"
+                           Margin="5 0 5 0"
+                           Foreground="Purple"/>
+                <Separator Background="Purple"
+                           Height="5"
+                           Width="70"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin=" 0 0 0 40"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+            <Button Margin="0 0 5 0 "
+                    Background="#CEA2FD"
+                    Foreground="Purple"
+                    x:Name="BtnAdminInfo"
+                    Click="BtnAdminInfo_Click"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    materialDesign:ButtonProgressAssist.IndicatorForeground="#B941ff"
+                    materialDesign:ButtonProgressAssist.Value="1"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    Content="{materialDesign:PackIcon Kind=Mail}"/>
+
+            <Button Margin="0 0 5 0 "
+                     Background="#CEA2FD"
+                     Foreground="Purple"
+                     x:Name="BtnDevInfo"
+                     Click="BtnDevInfo_Click"
+                     Style="{StaticResource MaterialDesignRaisedButton}"
+                     materialDesign:ButtonProgressAssist.IndicatorForeground="#B941ff"
+                     materialDesign:ButtonProgressAssist.Value="1"
+                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                     Content="{materialDesign:PackIcon Kind=EmojiHappy}"/>
+
+            <Button Margin="0 0 5 0 "
+                     Background="#CEA2FD"
+                     Foreground="Purple"
+                     x:Name="BtnUseerInfo"
+                     Click="BtnUseerInfo_Click"
+                     Style="{StaticResource MaterialDesignRaisedButton}"
+                     materialDesign:ButtonProgressAssist.IndicatorForeground="#B941ff"
+                     materialDesign:ButtonProgressAssist.Value="1"
+                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                     Content="{materialDesign:PackIcon Kind=BlockChain}"/>
+
+            <Button Margin="0 0 5 0 "
+                     Background="#CEA2FD"
+                     Foreground="Purple"
+                     x:Name="BtnClean"
+                     Click="BtnClean_Click"
+                     Style="{StaticResource MaterialDesignRaisedButton}"
+                     materialDesign:ButtonProgressAssist.IndicatorForeground="#B941ff"
+                     materialDesign:ButtonProgressAssist.Value="1"
+                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                     Content="{materialDesign:PackIcon Kind=Clear}"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
