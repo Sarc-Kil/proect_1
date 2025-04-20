@@ -18,7 +18,7 @@
 
 2.Окно входа (Ошибка ввода данных)
 
-  ![](https://github.com/Sarc-Kil/proect_1/blob/master/screnchot/Снимок.PNG)
+   ![](https://github.com/Sarc-Kil/proect_1/blob/master/screnchot/Снимок.PNG)
 ## Установка
 
 1. Клонируйте репозиторий:
